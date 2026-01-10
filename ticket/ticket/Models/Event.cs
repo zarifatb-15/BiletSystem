@@ -8,12 +8,12 @@ public class Event
     
     public DateTime Date { get; set; }
     
-    public int TicketCount { get; set; }
+    public decimal Price{ get; set; }
     
     public List<Ticket> Tickets { get; set; }
 
     public override string ToString()
     {
-        return $"Event Name={Name}, Date={Date}, TicketCount={TicketCount}]";
+        return $"Event Name={Name}, Date={Date}, TicketCount={Price}]";
     }
 }
