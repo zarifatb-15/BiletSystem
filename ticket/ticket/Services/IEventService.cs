@@ -14,5 +14,11 @@ public interface IEventService
     
     Task DeleteEventAsync(int eventId);
     
+    Task <List<EventTicketCountDto>> GetEventsBySoldTicketAsync();
     
+    Task <List<Event>>GetEventsByIncomeAsync();
+    
+    Task<List<Event>> GetFutureEventsAsync();
+    
+    Task<List<string>> GetPastEventStatisticsAsync();
 }

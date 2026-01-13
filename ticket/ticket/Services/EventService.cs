@@ -1,6 +1,4 @@
-using System.Reflection;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using ticket.Data;
 using ticket.Models;
 
@@ -15,12 +13,11 @@ public class EventService: IEventService
         _context = context;
     }
 
-    public async Task<Event> GetEventByIdAsync(int eventId)
+    public async Task<Event?> GetEventByIdAsync(int eventId)
     {
-      var eventEntity=  await _context.Events.FindAsync(eventId);
-      if (eventEntity == null)
-          return null;
-      return eventEntity;
+      return await _context.Events
+          .Include(e=>e.Tickets)
+          .FirstOrDefaultAsync(e=>e.Id==eventId);
     }
 
     public Task<List<Event>> GetAllEventsAsync()
@@ -39,6 +36,26 @@ public class EventService: IEventService
     }
 
     public Task DeleteEventAsync(int eventId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<List<EventTicketCountDto>> GetEventsBySoldTicketAsync()
+    {
+throw  new NotImplementedException();
+    }
+
+    public Task<List<Event>> GetEventsByIncomeAsync()
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<List<Event>> GetFutureEventsAsync()
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<List<string>> GetPastEventStatisticsAsync()
     {
         throw new NotImplementedException();
     }

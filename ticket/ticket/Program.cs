@@ -15,11 +15,11 @@ class Program
 
         // await ticketService.BuyTicketAsync(4);
         // await ticketService.UseTicketAsync(2);
-        
+
         // bool exit = false;
         // while (!exit)
         // {
-        //     Console.WriteLine("-------Event Menu-------");  
+        //     Console.WriteLine("-------Event Menu-------");
         //     Console.WriteLine("1. Add Event");
         //     Console.WriteLine("2. Get All Events");
         //     Console.WriteLine("3. Get Event By Id");
@@ -27,13 +27,13 @@ class Program
         //     Console.WriteLine("5. Delete Event");
         //     Console.WriteLine("6. Exit");
         //     Console.Write("Select an option: ");
-        //     
+        //
         //     string input = Console.ReadLine();
         //
         //
         //     switch (input)
         //     {
-        //         case "1": 
+        //         case "1":
         //             await AddEvent(); break;
         //         case "2":
         //             await GetAllEvents();
@@ -50,29 +50,29 @@ class Program
         //             exit = true;
         //             break;
         //             default:
-        //                 Console.WriteLine("Invalid option. Please try again.");  
+        //                 Console.WriteLine("Invalid option. Please try again.");
         //                 break;
         //     }
         // }
 
         Console.WriteLine("Program exited.");
-        
-        
+
+
         // async Task AddEvent()
         // {
         //     Console.Write("Enter Event Name: ");
         //     string name = Console.ReadLine();
-        //     
+        //
         //     Console.Write("Enter Event Date (yyyy-MM-dd): ");
         //     string dateInput = Console.ReadLine();
         //     DateTime date = DateTime.ParseExact(dateInput, "yyyy-MM-dd", CultureInfo.InvariantCulture);
-        //     
+        //
         //     var ev = new Event
         //     {
         //         Name = name,
         //         Date = date
         //     };
-        //     
+        //
         //     await eventService.AddAsync(ev);
         //     Console.WriteLine("Event added successfully!");
         // }
@@ -112,14 +112,14 @@ class Program
         //     {
         //         Console.Write("Enter New Event Name: ");
         //         string name = Console.ReadLine();
-        //         
+        //
         //         Console.Write("Enter New Event Date (yyyy-MM-dd): ");
         //         string dateInput = Console.ReadLine();
         //         DateTime date = DateTime.ParseExact(dateInput, "yyyy-MM-dd", CultureInfo.InvariantCulture);
-        //         
+        //
         //         ev.Name = name;
         //         ev.Date = date;
-        //         
+        //
         //         await eventService.UpdateAsync(ev);
         //         Console.WriteLine("Event updated successfully!");
         //     }
@@ -137,11 +137,11 @@ class Program
         //     Console.WriteLine("Event deleted successfully!");
         // }
 
-   
-        
-        
-        
+
+
+
+
     }
 
-    
+
 }

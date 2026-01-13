@@ -9,7 +9,7 @@ public class Event
     public DateTime Date { get; set; }
     
     public decimal Price{ get; set; }
-    
+
     public List<Ticket> Tickets { get; set; }
 
     public override string ToString()
